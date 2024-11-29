@@ -18,6 +18,7 @@ const UserFilterPage = ({ baseUrl }) => {
   const [sinDelUser, setSinDelUser] = useState();
   const [delResponse, setDelResponse] = useState();
   const NavToSinMat = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleGetUserData = async () => {
@@ -107,7 +108,7 @@ const UserFilterPage = ({ baseUrl }) => {
               <div className="d-flex usermem-1st-col-icons-div justify-content-end gap-3 align-items-center pe-2">
                 <BsCalendarDate className="userfill-icon" />
                 <IoIosPrint className="userfill-icon" />
-                <FaFilter className="userfill-icon" />
+                <FaFilter onClick={()=>navigate("/user/matrimony/filter")} className="userfill-icon" />
                 <FaFolderPlus className="userfill-icon" />
               </div>
             </div>

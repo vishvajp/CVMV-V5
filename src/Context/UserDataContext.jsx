@@ -75,7 +75,8 @@ export const DataProvider = ({ children }) => {
       location.pathname === "/user/matrimony" ||
       location.pathname === "/user/membership" ||
       location.pathname === "/home/notification/memberapprove"||
-      location.pathname === "/home/notification"
+      location.pathname === "/home/notification"||
+      location.pathname === "/user/membership/detail"
     ) {
       handlePending();
       handleMatPendCount();

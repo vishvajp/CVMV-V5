@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import UserMemInact from "./UserMemInact";
 // import axios from "axios";
 
-const UserMemPage = ({ activeMemSingleDetail, baseUrl }) => {
+const UserMemPage = ({ baseUrl }) => {
   const [userData, setUserData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [search, setSearch] = useState("");
@@ -20,6 +20,8 @@ const UserMemPage = ({ activeMemSingleDetail, baseUrl }) => {
   const [delResponse, setDelResponse] = useState();
   const [specUser, setSpecUser] = useState();
   const singlePersonNav = useNavigate();
+  const navigate = useNavigate()
+  
 
   useEffect(() => {
     const handleGetUserData = async () => {
@@ -104,8 +106,9 @@ const UserMemPage = ({ activeMemSingleDetail, baseUrl }) => {
               <div className="d-flex usermem-1st-col-icons-div justify-content-end gap-3 align-items-center pe-2">
                 <BsCalendarDate className="memfill-icon" />
                 <IoIosPrint className="memfill-icon" />
-                <FaFilter className="memfill-icon" />
+                <FaFilter onClick={()=>navigate("/home/memuser/filter")} className="memfill-icon" />
                 <FaFolderPlus
+                onClick={()=>navigate("/home/membership/add")}
                   className="memfill-icon"
                   // onClick={() => handleOtpPage()}
                 />

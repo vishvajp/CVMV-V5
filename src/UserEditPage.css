@@ -37,7 +37,24 @@
   padding-left: 10px;
 }
 
+.user-edit-form-label {
+  padding: 10px;
+  font-weight: 600;
+  font-size: large;
+}
 .user-edit-form input {
+  color: red;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 2px gray;
+  background-color: rgb(234, 232, 232);
+  font-size: medium;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.user-edit-form textarea{
   color: red;
   padding: 5px 10px;
   border-radius: 10px;
@@ -69,6 +86,9 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+
+
 
 .user-edit-form-choose-file-input {
   width: 227px;

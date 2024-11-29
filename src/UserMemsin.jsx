@@ -8,11 +8,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 const UserMemsin = () => {
   const { Panel } = Collapse;
   const location = useLocation();
+  const navToEdit = useNavigate();
   const singleMatData = location.state || {};
   // console.log(singleMatData.children);
-  // const handleNavToEdit = () => {
-  //   navToEdit("/home/user/edit", { state: { sinUserData } });
-  // };
+  const handleNavToEdit = () => {
+    navToEdit("/home/memuser/edit", { state: { singleMatData } });
+  };
 
   // console.log("game",activePer)
   return (
@@ -93,14 +94,14 @@ const UserMemsin = () => {
         </div>
 
         <div className="col-lg-8">
-          {/* <div className=" d-flex justify-content-end ">
+          <div className=" d-flex justify-content-end ">
             <button
               className="usermatsin-edit-button"
               onClick={handleNavToEdit}
             >
               Edit
             </button>
-          </div> */}
+          </div>
           <div className="matri-sin-mob-div">
             <p className="usermemsin-2nd-col-membership-text">
               Membership Detail

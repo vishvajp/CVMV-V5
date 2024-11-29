@@ -1,0 +1,28 @@
+.userMem-filter-select{
+    border-radius: 5px;
+    border: none;
+
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-weight: 500;
+}
+
+.usermem-filter-search-input{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 10px;
+ 
+    width: 100%;
+}
+
+.usermem-filter-print-button{
+    color: white;
+    background-color: green;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    /* margin-bottom: 5px; */
+    border-radius: 5px;
+    font-size: medium;
+}

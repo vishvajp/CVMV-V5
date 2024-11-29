@@ -36,6 +36,31 @@ const PendingMatriSin = ({ baseUrl }) => {
     }
   };
 
+
+  const handleDelete = async () => {
+    // Show a confirmation dialog before proceeding with deletion
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this user?"
+    );
+
+    // If the user clicks "OK", proceed with deletion
+    if (confirmation) {
+      try {
+        const responseDel = await axios.post(
+          `${baseUrl}Tsit_Cvmv_Mat_Delete_Admin/${singlePendUserData.matrimony_details.matri_id}`
+        );
+        console.log(responseDel);
+        window.alert(`${responseDel.data.message}`);
+          
+          navToHome("/home/notification");
+        
+      } catch (err) {
+        console.log(err.response);
+      }
+    }
+  };
+
+
   // console.log(singlePendUserData, "image", singlePendUserData.horoscope_attach);
 
   return (
@@ -184,7 +209,7 @@ const PendingMatriSin = ({ baseUrl }) => {
         </div>
         <div className="row ps-4 pb-3 pe-4">
           <div className="col-4 col-lg-3">
-            <span className="pendingmatrisin-label-span">Wieght</span>
+            <span className="pendingmatrisin-label-span">Weight</span>
           </div>
           <div className="col-6 col-lg-4">
             <span className="pendingmatrisin-input-span">
@@ -395,6 +420,12 @@ const PendingMatriSin = ({ baseUrl }) => {
           >
             APPROVE
           </button>
+          <button
+                    className="pendingmatrisin-Del-button"
+                    onClick={handleDelete}
+                  >
+                    DELETE
+                  </button>
         </div>
       </div>
     </div>

@@ -24,6 +24,16 @@ import ContinuePage from "./ContinuePage";
 import UserMatInActiveSin from "./UserMatInActiveSin";
 import UserMemSinInact from "./UserMemSinInact";
 import PendingMemSin from "./PendingMemSin";
+import UserMemsinEdit from "./UserMemsinEdit";
+import UserMemFilterPage from "./UserMemFilterPage";
+import MemberScroll from "./MemberScroll"
+import BannerImg from "./BannerImg";
+import UserMatFilter from "./UserMatFilter";
+import MemBannerEdit from "./MemBannerEdit";
+import BannerMatImg from "./BannerMatImg";
+import MatBannerEdit from "./MatBannerEdit";
+import MatrimonyScroll from "./MatrimonyScroll";
+import AddMemUser from "./AddMemUser";
 // import ProtectedRoute from "./ProtectedRouter";
 
 function App() {
@@ -129,14 +139,14 @@ function App() {
                   </AppLayout>
                 }
               />
-              <Route
+              {/* <Route
                 path="user/matrimony/filter"
                 element={
                   <AppLayout>
                     <UserMatrimony />
                   </AppLayout>
                 }
-              />
+              /> */}
               <Route
                 path="user/matrimony/detail"
                 element={
@@ -153,6 +163,16 @@ function App() {
                   </AppLayout>
                 }
               />
+
+              <Route
+                path="user/matrimony/filter"
+                element={
+                  <AppLayout>
+                    <UserMatFilter baseUrl={baseUrl} />
+                  </AppLayout>
+                }
+              />
+
               <Route
                 path="user/matrimony/update"
                 element={
@@ -198,6 +218,22 @@ function App() {
                 element={
                   <AppLayout>
                     <UserEditPage baseUrl={baseUrl} />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="/home/memuser/filter"
+                element={
+                  <AppLayout>
+                    <UserMemFilterPage baseUrl={baseUrl}></UserMemFilterPage>
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="home/memuser/edit"
+                element={
+                  <AppLayout>
+                    <UserMemsinEdit baseUrl={baseUrl}></UserMemsinEdit>
                   </AppLayout>
                 }
               />
@@ -307,10 +343,53 @@ function App() {
                 }
               />
               <Route
-                path="/home/banner"
+                path="user/member/scrolling"
                 element={
                   <AppLayout>
-                    <ContinuePage />
+                    <MemberScroll baseUrl={baseUrl}></MemberScroll>
+                  </AppLayout>
+                }
+              />
+               <Route
+                path="user/matrimony/scrolling"
+                element={
+                  <AppLayout>
+                   <MatrimonyScroll baseUrl={baseUrl}></MatrimonyScroll>
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="user/banner/image"
+                element={
+                  <AppLayout>
+                    <BannerImg baseUrl={baseUrl}></BannerImg>
+                  </AppLayout>
+                }
+              />
+
+              <Route
+                path="user/banner/matimage"
+                element={
+                  <AppLayout>
+                    <BannerMatImg baseUrl={baseUrl}></BannerMatImg>
+                  </AppLayout>
+                }
+              />
+
+              <Route
+                path="user/bannermem/image/edit"
+                element={
+                  <AppLayout>
+                    <MemBannerEdit baseUrl={baseUrl}></MemBannerEdit>
+                  </AppLayout>
+                }
+              />
+
+<Route
+                path="user/bannermat/image/edit"
+                element={
+                  <AppLayout>
+                <MatBannerEdit baseUrl={baseUrl}></MatBannerEdit>
                   </AppLayout>
                 }
               />
@@ -343,6 +422,14 @@ function App() {
                 element={
                   <AppLayout>
                     <PendingMemSin baseUrl={baseUrl} />
+                  </AppLayout>
+                }
+              />
+               <Route
+                path="/home/membership/add"
+                element={
+                  <AppLayout>
+                    <AddMemUser baseUrl={baseUrl}></AddMemUser>
                   </AppLayout>
                 }
               />

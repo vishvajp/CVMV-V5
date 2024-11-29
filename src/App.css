@@ -3,7 +3,9 @@
   overflow-y: hidden;
 }
 
-
+body{
+  overflow-y: unset !important;
+}
 
 /* pendingmemsinpage css */
 

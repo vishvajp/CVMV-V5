@@ -154,17 +154,44 @@ export default function AppLayout({ children, admin }) {
       //   visible: true,
     },
     {
-      menu_name: "Banner Slider",
+      menu_name: "Banner ",
       menu_url: "home/banner",
       menu_icon: <FaHome />,
-      submenuservice: [],
+      submenuservice: [
+        {
+          menu_name: "Banner Mem Img",
+          menu_url: "user/banner/image",
+
+          //   visible: false,
+        },
+        {
+          menu_name: "Banner Matri Img",
+          menu_url: "user/banner/matimage",
+
+          //   visible: false,
+        },
+        {
+          menu_name: "Member Scrolling Text",
+          menu_url: "user/member/scrolling",
+
+          //   visible: false,
+        },
+        {
+          menu_name: "Matrimony Scrolling Text",
+          menu_url: "user/matrimony/scrolling",
+
+          //   visible: false,
+        },
+      ],
       //   visible: true,
     },
     {
       menu_name: "Location",
       menu_url: "home/location",
       menu_icon: <FaHome />,
-      submenuservice: [],
+      submenuservice: [
+       
+      ],
       //   visible: true,
     },
     {

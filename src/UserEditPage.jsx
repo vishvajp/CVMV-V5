@@ -492,7 +492,7 @@ const UserEditPage = ({ baseUrl }) => {
                   <div className="d-flex flex-column">
                     <label>Rasi</label>
                     <select
-                      type="text"
+                      
                       name="j_rasi"
                       value={profileData.j_rasi}
                       onChange={handleChange}
